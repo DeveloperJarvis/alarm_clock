@@ -193,6 +193,21 @@ The project includes tests for:
 
 ---
 
+# AI Usage
+
+AI tools (ChatGPT) were used during development to assist with:
+
+* Refining ambiguous requirements.
+* Discussing project architecture.
+* Brainstorming implementation approaches.
+* Generating initial boilerplate code.
+* Reviewing design decisions.
+* Improving project documentation.
+
+All AI-generated suggestions were manually reviewed, adapted where necessary, and validated through implementation and testing. Final design decisions and code organization were based on engineering judgment rather than accepting generated output without review.
+
+---
+
 # License
 
 This project was created as part of a software engineering assignment and is intended for educational purposes.
