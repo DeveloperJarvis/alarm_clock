@@ -1,0 +1,5 @@
+DATA_FILE = "alarms.json"
+POLL_INTERVAL = 1
+DEFAULT_SNOOZE = 300    # seconds
+TIME_FORMAT = "HH:MM"
+DATETIME_FORMAT = "%Y-%m-%dT%H:%M:%S"
