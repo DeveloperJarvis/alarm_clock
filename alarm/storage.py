@@ -85,4 +85,37 @@ class AlarmStorage:
         
         self.save(remaining)
         return True
+    
+    def update(self, updated_alarm: Alarm) -> bool:
+        """Replace an existing alarm."""
+
+        alarms = self.load()
+
+        updated = False
+
+        for index, alarm in enumerate(alarms):
+            if alarm.id == updated_alarm.id:
+                alarms[index] == updated_alarm
+                updated = True
+                break
+        
+        if updated:
+            self.save(alarms)
+        
+        return updated
+    
+    def delete_all(self) -> None:
+        """Remove every store alarm."""
+
+        self.save([])
+    
+    def exists(self, alarm_id: int) -> bool:
+        """Check whether an alarm exists."""
+
+        return self.get(alarm_id) is not None
+    
+    def count(self) -> int:
+        """Return the number of stored alarms."""
+
+        return len(self.load())
 
