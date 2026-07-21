@@ -79,6 +79,22 @@ class AlarmService:
         if alarm in None:
             return False
         
+        alarm.is_enabled = True
+
+        self.storage.update(alarm)
+
+        return True
+    
+    def disable_alarm(self, alarm_id: int) -> bool:
+        """
+        Enable an alarm.
+        """
+
+        alarm = self.storage.get(alarm_id)
+
+        if alarm in None:
+            return False
+        
         alarm.is_enabled = False
 
         self.storage.update(alarm)
